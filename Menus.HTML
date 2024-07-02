@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            direction: rtl;
+        }
+        form {
+            font-family: 'Cairo', sans-serif;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        label {
+            font-family: 'Cairo', sans-serif;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="text"],
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            font-family: 'Cairo', sans-serif;
+            width: 100%;
+            padding: 8px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            font-family: 'Cairo', sans-serif;
+            background-color: #218838;
+            background: #FFFFFF; 
+            color: #218838;
+            padding: 8px; 
+            border: 2px solid #218838; 
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <form action="https://formsubmit.co/elbarakalagh03@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="showAlert(event)">
+        <input type="hidden" name="_subject" value="New Email!">
+                
+        <label for="fullname">أكتب إسمك و لقبك:</label>
+        <input type="text" id="fullname" name="fullname" placeholder=" الإسم و اللقب " required>
+        
+        <label for="state"> أدخل إسم ولايتك:</label>
+        <input type="text" id="state" name="state" placeholder=" من أي ولاية" required>
+        
+        <label for="pledge">أكتب ميثاق المقاطعة:</label>
+        <input type="text" id="pledge" name="pledge" placeholder=" هل تعاهد على مقاطعة المنتوجات الداعمة للكيان الصهيوني " required>
+
+        <label for="image">أدخل صورتك (إختياري):</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">إرسال</button>
+    </form>
+</body>
+</html>
